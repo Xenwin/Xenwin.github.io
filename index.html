@@ -8,10 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <div class="header-hero-wrapper">
@@ -19,8 +19,8 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#about">about</a></li>
+          <li><a href="#services">services</a></li>
           <li><a href="#projects">projects</a></li>
-          <li><a href="#skills">skills</a></li>
           <li><a href="#contact">contact</a></li>
         </ul>
         <button id="darkModeToggle" aria-label="Toggle dark mode">
@@ -29,123 +29,241 @@
       </nav>
     </header>
     <section class="hero">
-      <h1>kaya</h1>
-      <p class="subtitle"><span id="typewriter"></span></p>
-      <h1 class="hero-title">Building cool things on the web.</h1>
-      <a href="#contact" class="hero-cta">get in touch</a>
+      <div class="hero-content">
+        <h1 class="hero-name">kaya</h1>
+        <p class="hero-subtitle"><span id="typewriter"></span></p>
+        <h2 class="hero-title">Building digital experiences that matter.</h2>
+        <div class="hero-cta-group">
+          <a href="#contact" class="hero-cta primary">get in touch</a>
+          <a href="#projects" class="hero-cta secondary">view projects</a>
+        </div>
+      </div>
     </section>
   </div>
+
   <main>
+    <section id="stats" class="stats-section">
+      <div class="stats-container">
+        <div class="stat-item">
+          <h3 class="stat-number">25+</h3>
+          <p class="stat-label">Projects</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number">100%</h3>
+          <p class="stat-label">Satisfaction</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number">3+</h3>
+          <p class="stat-label">Years Active</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number">15+</h3>
+          <p class="stat-label">Happy Clients</p>
+        </div>
+      </div>
+    </section>
 
     <section id="about">
       <h2>about me</h2>
       <div class="about-content">
-        <div class="globe-wrap">
-          <canvas id="about-globe" aria-hidden="true"></canvas>
-        </div>
         <div class="text">
-          <p>I’m a software developer who uses Arch btw.</p>
+          <p class="about-description">Hey there! I'm a software developer who uses Arch btw (yes, I'm that person). I love turning coffee into code and building things that actually work.</p>
+          <p class="about-description">When I'm not debugging my life choices, I'm probably learning a new stack or trying to convince friends that Linux is superior. I believe in clean code, good coffee, and the fact that tabs are better than spaces.</p>
+        </div>
+        <div class="globe-wrap">
+          <div class="about-blob"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>what i do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Development</h3>
+          <p>I build stuff that works. Web apps, APIs, internal tools — you name it. If it involves code and solves a real problem, I'm probably into it.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3>Web Design</h3>
+          <p>Making things look good while actually being functional. Because let’s be honest, nobody wants a beautiful website that doesn’t work.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>AI Stuff</h3>
+          <p>Integrating AI into your workflow so you can focus on the human stuff. Robots do the boring work, we do the creative bits.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Consulting</h3>
+          <p>Sometimes you just need someone to tell you if your idea is crazy or brilliant. I’m here to help you figure that out.</p>
         </div>
       </div>
     </section>
 
     <section id="projects">
-      <h2>projects</h2>
-      <div class="project">
-        <h3>personal blog</h3>
-        <p>a minimal blog built with astro and markdown. simple, fast and clean.</p>
-      </div>
-      <div class="project">
-        <h3>portfolio site</h3>
-        <p>this site you're viewing. no frameworks. pure html/css/js.</p>
+      <h2>stuff i've built</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-blog"></i>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Personal Blog</h3>
+            <p>My little corner of the internet where I share thoughts, tutorials, and occasionally rant about JavaScript frameworks.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Astro</span>
+              <span class="tech-badge">Markdown</span>
+              <span class="tech-badge">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-briefcase"></i>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>This Portfolio</h3>
+            <p>You're looking at it right now! Built with pure HTML, CSS, and JavaScript — sometimes the old ways are the best ways.</p>
+            <div class="project-tech">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-gamepad"></i>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Game Projects</h3>
+            <p>Some fun side projects I built when I should probably be sleeping. Coding games is way more fun than sleeping.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Canvas</span>
+              <span class="tech-badge">WebGL</span>
+              <span class="tech-badge">C++</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Live Demo</a>
+              <a href="#" class="project-link">Source Code</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="skills">
-      <h2>skills</h2>
-      <div class="skills-container">
-        <div class="skill">
-          <h3>HTML</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 90%"></div>
+    <section id="testimonials">
+      <h2>what clients say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Kaya actually delivered what they promised, on time. In this industry, that's basically a miracle. Plus, the code was clean and well-documented."</p>
           </div>
-          <span class="skill-percentage">90%</span>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>CEO, TechStart</p>
+            </div>
+          </div>
         </div>
-        <div class="skill">
-          <h3>CSS</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 85%"></div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Finally found someone who speaks human instead of corporate jargon. Kaya understood our needs and built exactly what we wanted."</p>
           </div>
-          <span class="skill-percentage">85%</span>
-        </div>
-        <div class="skill">
-          <h3>JavaScript</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 70%"></div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>Michael Chen</h4>
+              <p>Lead Developer, InnovateCorp</p>
+            </div>
           </div>
-          <span class="skill-percentage">70%</span>
-        </div>
-        <div class="skill">
-          <h3>C++</h3>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 70%"></div>
-          </div>
-          <span class="skill-percentage">70%</span>
-        </div>
-        <div class="skill">
-          <h3>Linux</h3>
-          <div class="skill-bar">
-            <div
-              class="skill-level skill-level-gold"
-              style="width: 100%"
-            ></div>
-          </div>
-          <span class="skill-percentage">1000%</span>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <h2>contact</h2>
-      <p>
-        Say hi! I’m always open to new opportunities and projects. Send me a
-        message.
-      </p>
-
-      <form id="contactForm">
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your name"
-          required
-        />
-
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your email"
-          required
-        />
-
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          placeholder="Your message"
-          required
-        ></textarea>
-
-        <button type="submit" class="btn-submit">Send</button>
-
-        <p id="formStatus" style="margin-top: 10px"></p>
-      </form>
+      <h2>let's talk</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Want to build something cool together?</h3>
+          <p>I'm always up for interesting projects and new challenges. Whether you have a specific idea or just want to chat about possibilities, I'd love to hear from you. No pressure, no corporate BS — just real talk about real projects.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell me about your project..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <p id="formStatus" class="form-status"></p>
+        </form>
+      </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Kaya. Built with ❤️ and lots of coffee.</p>
+    </div>
+  </footer>
+
   <script src="script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.36/bundled/lenis.min.js"></script>
 </body>

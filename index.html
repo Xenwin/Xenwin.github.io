@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kaya — Portfolio</title>
+  <meta name="description" content="Kaya — Software developer crafting vibrant, performant, and accessible digital experiences." />
+  <meta name="keywords" content="Kaya, portfolio, software developer, web developer, web design, JavaScript, HTML, CSS, AI" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:title" content="Kaya — Portfolio" />
+  <meta property="og:description" content="Building digital experiences that matter. Developer, gamer, learner, creator." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,16 +21,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <a href="#mainContent" class="skip-link">Skip to content</a>
+
+  <div id="loader" class="loader" aria-hidden="true" aria-label="Loading">
+    <div class="loader-spinner" role="img" aria-label="Loading"></div>
+    <p class="loader-text">Loading…</p>
+  </div>
   <div class="header-hero-wrapper">
     <header class="navbar">
-      <nav>
+      <nav role="navigation" aria-label="Primary">
         <ul class="nav-links">
           <li><a href="#about">about</a></li>
           <li><a href="#services">services</a></li>
           <li><a href="#projects">projects</a></li>
           <li><a href="#contact">contact</a></li>
         </ul>
-        <button id="darkModeToggle" aria-label="Toggle dark mode">
+        <button id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false">
           <span aria-hidden="true">🌙</span>
         </button>
       </nav>
@@ -41,7 +54,7 @@
     </section>
   </div>
 
-  <main>
+  <main id="mainContent" role="main" tabindex="-1">
     <section id="stats" class="stats-section">
       <div class="stats-container">
         <div class="stat-item">
@@ -93,13 +106,7 @@
           <h3>Web Design</h3>
           <p>Making things look good while actually being functional. Because let’s be honest, nobody wants a beautiful website that doesn’t work.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-robot"></i>
-          </div>
-          <h3>AI Stuff</h3>
-          <p>Integrating AI into your workflow so you can focus on the human stuff. Robots do the boring work, we do the creative bits.</p>
-        </div>
+        
         <div class="service-card">
           <div class="service-icon">
             <i class="fas fa-users"></i>
@@ -211,10 +218,10 @@
           <h3>Want to build something cool together?</h3>
           <p>I'm always up for interesting projects and new challenges. Whether you have a specific idea or just want to chat about possibilities, I'd love to hear from you. No pressure, no corporate BS — just real talk about real projects.</p>
           <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" class="social-link" aria-label="Discord"><i class="fab fa-discord" aria-hidden="true"></i></a>
           </div>
         </div>
         <form id="contactForm" class="contact-form">
@@ -252,7 +259,7 @@
             <span>Send Message</span>
             <i class="fas fa-paper-plane"></i>
           </button>
-          <p id="formStatus" class="form-status"></p>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
